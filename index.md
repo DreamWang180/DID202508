@@ -1,35 +1,37 @@
 ---
-title: Home
-layout: home
+layout: default
+title: Difference-in-Difference (DiD)
+nav_order: 1
+description: "Welcome to the DiD revolution."
+image: "/assets/images/DiD.jpg"
+permalink: /
 ---
 
-This is a *bare-minimum* template to create a Jekyll site that uses the [Just the Docs] theme. You can easily set the created site to be published on [GitHub Pages] – the [README] file explains how to do that, along with other details.
 
-If [Jekyll] is installed on your computer, you can also build and preview the created site *locally*. This lets you test changes before committing them, and avoids waiting for GitHub Pages.[^1] And you will be able to deploy your local build to a different platform than GitHub Pages.
+# Welcome!
 
-More specifically, the created site:
+*Last updated: November 2024*
 
-- uses a gem-based approach, i.e. uses a `Gemfile` and loads the `just-the-docs` gem
-- uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages
+This repository tracks the developments in **Difference-in-Difference (DiD)** software packages. Brief explanations on how to use these packages is also provided. The [Resources](https://asjadnaqvi.github.io/DiD/docs/resources) section includes information on relevant readings, books, videos, and workshops in this field. 
 
-Other than that, you're free to customize sites that you create with this template, however you like. You can easily change the versions of `just-the-docs` and Jekyll it uses, as well as adding further plugins.
+The website gets updated roughly every three to four months. Therefore, it might not contain the most recent information. If you come across bugs, package updates, broken links, or even new packages, then please do a Pull Request or start an [Issue](https://github.com/asjadnaqvi/DiD/issues). The aim of this repository is to collectively build notes and a code base that we can all use.
 
-[Browse our documentation][Just the Docs] to learn more about how to use this theme.
 
-To get started with creating a site, simply:
+## What happened? The DiD renaissance
+The DiD renaissance was nothing short of a revolution in 2020. Several papers and packages coming out in 2020 and 2021. This combined with COVID-19 lockdowns, where everyone working from home, and with #EconTwitter at its peak online activity, boosted the popularity of the new DiD methods tremendously. Even in 2023 and 2024 we continue to see improvements to existing packages and new releases. More applications are also coming out.
 
-1. click "[use this template]" to create a GitHub repository
-2. go to Settings > Pages > Build and deployment > Source, and select GitHub Actions
+At the heart of this new DiD literature is the premise that the classic Two-way Fixed Effects (TWFE) model can give [wrong estimates](https://asjadnaqvi.github.io/DiD/docs/code/06_01_twfe/) under certain conditions. This is highly likely if treatments are heterogeneous (differential treatment timings, different treatment sizes, different treatment statuses over time) that can contaminate the treatment effects. This can result from "bad" treatment combinations biased the average treatment estimation to the point of even reversing the sign. Innovations like the [Bacon decomposition](https://asjadnaqvi.github.io/DiD/docs/code/06_02_bacon/) help us unpack the relative weight of the various combinations of treated versus untreated cohorts. The new DiD methods automatically "correct" for the TWFE biases using various techniques such as bootstrapping, inverse probability weights, matching, influence functions, and imputations, to handle parallel trends, negative weights, covariates, and controls.
 
-If you want to maintain your docs in the `docs` directory of an existing project repo, see [Hosting your docs from an existing project repo](https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md#hosting-your-docs-from-an-existing-project-repo) in the template README.
+While these methods are definitely an improvement over classic TWFE methods, a careful and deeper dive is required in order to gain a solid understanding of which methods and/or packages works best for which problems. Currently, more is being written on comparing the different packages by those who know this stuff better.
 
-----
+Several review papers have come out that summarize the state-of-the-field really well. They are a good starting point to familiarize oneself with the methods and are marked in the [Resources](https://asjadnaqvi.github.io/DiD/docs/resources) section.
 
-[^1]: [It can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
 
-[Just the Docs]: https://just-the-docs.github.io/just-the-docs/
-[GitHub Pages]: https://docs.github.com/en/pages
-[README]: https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md
-[Jekyll]: https://jekyllrb.com
-[GitHub Pages / Actions workflow]: https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/
-[use this template]: https://github.com/just-the-docs/just-the-docs-template/generate
+## Misc info
+
+If you want to report errors, updates, and/or want to contribute, then please do a Pull Request (especially if you have written the package), [open an issue](https://github.com/AsjadNaqvi/DiD/issues) or worse case scenario, e-mail me. 
+
+I maintain the [Stata code](https://asjadnaqvi.github.io/DiD/docs/code) while [@grantmcdermott](https://github.com/grantmcdermott) has been super amazing in maintaining the [R code](https://asjadnaqvi.github.io/DiD/docs/code_r). Please reach out if you can help contribute information for *Python*, *Julia*, or other languages.
+
+If you use this repository and find it helpful, giving it a star, an acknowledgement, and/or citations will be highly appreciated.
+
